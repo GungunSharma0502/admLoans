@@ -1,0 +1,146 @@
+.trust-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.trust-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.trust-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e5a8e;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.trust-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1e5a8e;
+  margin: 12px auto 0;
+}
+
+.trust-subheading {
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.trust-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  min-height: 120px;
+}
+
+.trust-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.trust-logo-placeholder {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+.trust-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.trust-toggle-btn {
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e5a8e;
+  background-color: transparent;
+  border: 2px solid #1e5a8e;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.trust-toggle-btn:hover {
+  background-color: #1e5a8e;
+  color: #ffffff;
+}
+
+.trust-toggle-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trust-section {
+    padding: 40px 16px;
+  }
+
+  .trust-heading {
+    font-size: 28px;
+  }
+
+  .trust-subheading {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .trust-card {
+    padding: 24px 16px;
+    min-height: 100px;
+  }
+
+  .trust-logo-placeholder {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .trust-heading {
+    font-size: 24px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,267 @@
+.award-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f4fd 0%, #d4e9fc 50%, #c0dffb 100%);
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top Left Dotted Pattern */
+.award-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-image: radial-gradient(circle, rgba(100, 181, 246, 0.3) 2px, transparent 2px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* Right Side Dotted Pattern */
+.award-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(100, 181, 246, 0.25) 2px, transparent 2px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.award-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.award-header {
+  margin-bottom: 60px;
+}
+
+.award-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1565c0;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.award-subtitle {
+  font-size: 18px;
+  color: #666;
+  font-weight: 400;
+  margin: 0;
+}
+
+.award-top-certificates {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.award-top-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+  width: 120px;
+}
+
+.award-top-card:hover {
+  transform: translateY(-8px);
+}
+
+.award-top-img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+}
+
+.award-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.award-slider {
+  overflow-x: hidden;
+  width: 100%;
+  cursor: grab;
+}
+
+.award-slider:active {
+  cursor: grabbing;
+}
+
+.award-slider-track {
+  display: flex;
+  gap: 25px;
+  width: fit-content;
+}
+
+.award-card {
+  min-width: 160px;
+  height: 180px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.award-laurel-left,
+.award-laurel-right {
+  position: absolute;
+  top: 8px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.award-laurel-left {
+  left: 8px;
+  transform: scaleX(-1);
+}
+
+.award-laurel-right {
+  right: 8px;
+}
+
+.award-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.award-card-title {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 130px;
+}
+
+@media (max-width: 1024px) {
+  .award-top-certificates {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .award-section {
+    padding: 60px 20px;
+  }
+
+  .award-title {
+    font-size: 32px;
+  }
+
+  .award-subtitle {
+    font-size: 16px;
+  }
+
+  .award-top-certificates {
+    gap: 15px;
+  }
+
+  .award-top-card {
+    width: 100px;
+    padding: 12px;
+  }
+
+  .award-top-img {
+    height: 120px;
+  }
+
+  .award-card {
+    min-width: 140px;
+    height: 170px;
+  }
+
+  .award-slider-track {
+    gap: 20px;
+  }
+
+  .award-slider-wrapper {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .award-section {
+    padding: 40px 15px;
+  }
+
+  .award-title {
+    font-size: 26px;
+  }
+
+  .award-top-card {
+    width: 85px;
+    padding: 10px;
+  }
+
+  .award-top-img {
+    height: 100px;
+  }
+
+  .award-card {
+    min-width: 130px;
+    height: 160px;
+    padding: 15px 12px;
+  }
+
+  .award-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .award-card-title {
+    font-size: 10px;
+  }
+
+  .award-slider-wrapper {
+    padding: 25px 15px;
+  }
+}
