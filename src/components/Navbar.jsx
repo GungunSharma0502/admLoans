@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import '../css/Navbar.css';
 
 const Navbar = () => {
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -17,43 +25,53 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`navbar-hamburger ${isSidebarOpen ? 'active' : ''}`}
+          onClick={toggleSidebar}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         {/* Navigation Menu */}
         <ul className="navbar-menu">
           <li className="navbar-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="navbar-item">
             <Link to="/about">About Us</Link>
           </li>
-
           <li className="navbar-item">
-            <Link to="/credit-score">Free Credit Score</Link>
-          </li>
-
-          <li 
-            className="navbar-item dropdown"
-            onMouseEnter={() => setIsResourcesOpen(true)}
-            onMouseLeave={() => setIsResourcesOpen(false)}
-          >
-            <Link to="#">
-              Resources <span className="dropdown-arrow">▼</span>
-            </Link>
-            {isResourcesOpen && (
-              <ul className="dropdown-menu">
-                <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/guides">Guides</Link></li>
-                <li><Link to="/faq">FAQ</Link></li>
-              </ul>
-            )}
-          </li>
-
-          <li className="navbar-item">
-            <a href="tel:+919152556556" className="phone-link">
-              <span className="phone-icon">📞</span>
-              +91-9152556556
-            </a>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 
-        {/* Download Button */}
-        <button className="download-btn">DOWNLOAD APP</button>
+        {/* Sidebar Overlay */}
+        {isSidebarOpen && (
+          <div className="navbar-overlay" onClick={closeSidebar}></div>
+        )}
+
+        {/* Sidebar Menu */}
+        <div className={`navbar-sidebar ${isSidebarOpen ? 'open' : ''}`}>
+          <button className="navbar-sidebar-close" onClick={closeSidebar}>
+            ×
+          </button>
+          
+          <ul className="navbar-sidebar-menu">
+            <li className="navbar-sidebar-item">
+              <Link to="/" onClick={closeSidebar}>Home</Link>
+            </li>
+            <li className="navbar-sidebar-item">
+              <Link to="/about" onClick={closeSidebar}>About Us</Link>
+            </li>
+            <li className="navbar-sidebar-item">
+              <Link to="/contact" onClick={closeSidebar}>Contact Us</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

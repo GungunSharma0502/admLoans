@@ -56,7 +56,7 @@ function App() {
         
 
         {/* Add more pages if needed */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
