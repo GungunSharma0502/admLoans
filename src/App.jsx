@@ -12,6 +12,7 @@ import Award from './components/Award'
 import News from './components/News'
 import Footer from './components/Footer'
 import About from './components/About'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Trust />
               <Award />
               <News />
+              <Contact/>
             </>
           }
         />
