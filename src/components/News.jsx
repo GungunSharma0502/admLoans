@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import '../css/news.css';
 
 const News = () => {
-  const [showAll, setShowAll] = useState(false);
+  // const [showAll, setShowAll] = useState(false);
 
   const newsArticles = [
     {
       logo: '/logos/outlook.png',
-      logoAlt: 'Outlook',
-      category: 'News',
+      logoAlt: 'Home',
+      category: 'Loan',
       title: "Dhanisha Navratri 2025: Banks & NBFCs Roll Out Special Schemes To Attract Borrowers",
       source: 'Outlook Money',
       timeAgo: '16 September'
     },
     {
       logo: '/logos/hindustan-times.png',
-      logoAlt: 'Hindustan Times',
-      category: 'News',
+      logoAlt: 'Business',
+      category: 'Business',
       title: "No EMI till possession scheme: 5 reasons why homebuyers should think twice",
       source: 'Hindustan Times',
       timeAgo: '1 September'
     },
     {
       logo: '/logos/economic-times.png',
-      logoAlt: 'The Economic Times',
-      category: 'News',
+      logoAlt: 'Home',
+      category: 'Home',
       title: "Will the dream run for home loan borrowers continue despite RBI pausing repo rate?",
       source: 'Economic Times',
       timeAgo: '2 hours'

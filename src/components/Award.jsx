@@ -11,9 +11,9 @@ const Award = () => {
 
     const smoothScroll = () => {
       if (slider) {
-        scrollPosition += 0.5; // Speed control (increase for faster scroll)
+        scrollPosition += 0.5;
         
-        const maxScroll = slider.scrollWidth / 2; // Divide by 2 because we duplicated awards
+        const maxScroll = slider.scrollWidth / 2;
         
         if (scrollPosition >= maxScroll) {
           scrollPosition = 0;
@@ -73,7 +73,6 @@ const Award = () => {
     }
   ];
 
-  // Triple the awards for seamless infinite scroll
   const infiniteAwards = [...awards, ...awards, ...awards];
 
   return (
