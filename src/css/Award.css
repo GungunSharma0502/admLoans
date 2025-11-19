@@ -1,241 +1,322 @@
 .award-section {
-  width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #e8f4fd 0%, #d4e9fc 50%, #c0dffb 100%);
-  padding: 80px 40px;
+  background: linear-gradient(135deg, #040b1d 0%, #010821 25%, #02122c 50%, #063163 75%, #00060d 100%);
+  padding: 4rem 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   position: relative;
   overflow: hidden;
+}
+
+.award-background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(147, 197, 253, 0.3) 0%, transparent 50%);
+  animation: backgroundPulse 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.award-dots-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="award-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23award-pattern)"/></svg>');
+  z-index: 0;
 }
 
 .award-container {
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 .award-header {
-  margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .award-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #1565c0;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.award-title-gradient {
+  background: linear-gradient(45deg, #ffffff, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .award-subtitle {
-  font-size: 18px;
-  color: #666;
-  font-weight: 400;
-  margin: 0;
-}
-
-.award-top-certificates {
-  position: absolute;
-  top: 80px;
-  right: 40px;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.award-top-card {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
-  width: 120px;
-}
-
-.award-top-card:hover {
-  transform: translateY(-8px);
-}
-
-.award-top-img {
-  width: 100%;
-  height: 140px;
-  object-fit: contain;
-  display: block;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .award-slider-wrapper {
   width: 100%;
+  max-width: 1200px;
   overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  padding: 2rem 0;
+  background: rgba(30, 58, 138, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .award-slider {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
-  cursor: grab;
-}
-
-.award-slider:active {
-  cursor: grabbing;
+  padding: 2rem 0;
 }
 
 .award-slider-track {
   display: flex;
-  gap: 25px;
+  gap: 2rem;
   width: fit-content;
+  animation: infiniteScroll 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.award-slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .award-card {
-  min-width: 160px;
-  height: 180px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  height: 260px;
+  background: rgba(30, 58, 138, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.award-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.award-laurel-left,
-.award-laurel-right {
+.award-card-gradient-bg {
   position: absolute;
-  top: 8px;
-  font-size: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1));
   opacity: 0.5;
 }
 
+.award-laurel {
+  position: absolute;
+  top: 12px;
+  font-size: 24px;
+  opacity: 0.4;
+  z-index: 1;
+}
+
 .award-laurel-left {
-  left: 8px;
+  left: 12px;
   transform: scaleX(-1);
 }
 
 .award-laurel-right {
-  right: 8px;
+  right: 12px;
 }
 
 .award-icon {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-size: 42px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .award-card-title {
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
-  color: #333;
-  line-height: 1.3;
+  color: #ffffff;
+  line-height: 1.5;
   margin: 0;
-  max-width: 130px;
+  max-width: 180px;
+  position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 1024px) {
-  .award-top-certificates {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
-    justify-content: center;
-    margin-top: 40px;
+.award-card-glow-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.award-card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.award-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
+}
+
+.award-card:hover .award-card-glow-effect {
+  opacity: 1;
+}
+
+.award-card:hover .award-card-shine {
+  left: 100%;
+}
+
+@keyframes backgroundPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
   }
 }
 
 @media (max-width: 768px) {
   .award-section {
-    padding: 60px 20px;
+    padding: 3rem 1.5rem;
   }
 
   .award-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .award-subtitle {
-    font-size: 16px;
+    font-size: 1.2rem;
   }
 
-  .award-top-certificates {
-    gap: 15px;
-  }
-
-  .award-top-card {
-    width: 100px;
-    padding: 12px;
-  }
-
-  .award-top-img {
-    height: 120px;
-  }
-
-  .award-card {
-    min-width: 140px;
-    height: 170px;
+  .award-slider {
+    padding: 1.5rem 0;
   }
 
   .award-slider-track {
-    gap: 20px;
+    gap: 1.5rem;
+    animation: infiniteScroll 20s linear infinite;
   }
 
-  .award-slider-wrapper {
-    padding: 30px 20px;
+  .award-card {
+    min-width: 180px;
+    height: 220px;
+    padding: 1.5rem 1rem;
+  }
+
+  .award-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+  }
+
+  .award-card-title {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .award-section {
-    padding: 40px 15px;
+    padding: 2rem 1rem;
   }
 
-  .award-title {
-    font-size: 26px;
+  .award-header {
+    margin-bottom: 3rem;
   }
 
-  .award-top-card {
-    width: 85px;
-    padding: 10px;
+  .award-slider {
+    padding: 1rem 0;
   }
 
-  .award-top-img {
-    height: 100px;
+  .award-slider-wrapper {
+    padding: 1.5rem 0;
+  }
+
+  .award-slider-track {
+    animation: infiniteScroll 15s linear infinite;
   }
 
   .award-card {
-    min-width: 130px;
-    height: 160px;
-    padding: 15px 12px;
+    min-width: 160px;
+    height: 200px;
+    padding: 1.25rem 0.875rem;
   }
 
   .award-icon {
     width: 60px;
     height: 60px;
     font-size: 30px;
+    margin-bottom: 1rem;
   }
 
   .award-card-title {
-    font-size: 10px;
+    font-size: 11px;
   }
 
-  .award-slider-wrapper {
-    padding: 25px 15px;
+  .award-laurel {
+    font-size: 20px;
+    top: 8px;
+  }
+
+  .award-laurel-left {
+    left: 8px;
+  }
+
+  .award-laurel-right {
+    right: 8px;
   }
 }

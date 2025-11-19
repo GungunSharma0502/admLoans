@@ -110,6 +110,8 @@ const Footer = () => {
             fill="none" 
             stroke="currentColor" 
             strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M18 15l-6-6-6 6"/>
           </svg>

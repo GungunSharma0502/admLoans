@@ -1,5 +1,5 @@
 .edEdge-container {
-  background: linear-gradient(135deg, #1e6db8 0%, #2b7ac4 50%, #1e6db8 100%);
+  background: linear-gradient(135deg, #09061a 0%, #0c1e2e 50%, #022241 100%);
   min-height: 100vh;
   padding: 50px 20px;
   display: flex;
@@ -24,7 +24,7 @@
 .edEdge-divider {
   width: 100px;
   height: 4px;
-  background: white;
+  background: rgb(61, 61, 67);
   margin: 0 auto 18px auto;
   border-radius: 2px;
 }

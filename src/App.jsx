@@ -14,6 +14,7 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Contact from './components/Contact'
 
+
 function App() {
   return (
     <Router>
@@ -25,13 +26,16 @@ function App() {
           path="/"
           element={
             <>
+            
               <HeroSlider />
-              <Story />
+             <News />
               <AndromedaEdge />
               <Standards />
+               <Story />
               <Trust />
+
               <Award />
-              <News />
+              
               <Contact/>
             </>
           }
@@ -43,8 +47,7 @@ function App() {
           element={
             <>
              <About />
-              <Story />
-              <AndromedaEdge />
+              
               <Standards />
               <Trust />
               <Award />
