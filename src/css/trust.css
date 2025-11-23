@@ -1,146 +1,453 @@
+/* Trust Section Styles - Dark Theme */
 .trust-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
+/* Background Elements */
+.bg-elements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 384px;
+  height: 384px;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(60px);
+  animation: blob 7s infinite;
+}
+
+.blob-1 {
+  top: 80px;
+  right: 40px;
+  background-color: rgba(191, 219, 254, 0.2);
+}
+
+.blob-2 {
+  bottom: 80px;
+  left: 40px;
+  background-color: rgba(165, 243, 252, 0.2);
+  animation-delay: 2s;
+}
+
+.blob-3 {
+  top: 50%;
+  left: 50%;
+  background-color: rgba(199, 210, 254, 0.2);
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Container */
 .trust-container {
-  max-width: 1320px;
+  position: relative;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
-.trust-heading {
-  font-size: 36px;
-  font-weight: 700;
-  color: #1e5a8e;
+/* Header Section */
+.trust-header {
   text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-wrapper {
+  display: inline-block;
+}
+
+.trust-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
   margin-bottom: 16px;
-  position: relative;
+  animation: fade-in 0.8s ease-out;
 }
 
-.trust-heading::after {
-  content: '';
-  display: block;
-  width: 60px;
+.title-underline {
   height: 4px;
-  background-color: #1e5a8e;
-  margin: 12px auto 0;
+  background: linear-gradient(to right, #2563eb, #06b6d4, #2563eb);
+  border-radius: 9999px;
+  width: 96px;
+  margin: 0 auto;
+  animation: slide-in 1s ease-out;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
 }
 
-.trust-subheading {
-  font-size: 16px;
-  color: #333333;
-  text-align: center;
-  margin-bottom: 48px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+.trust-description {
+  font-size: 1.125rem;
+  color: #e5e7eb;
+  max-width: 768px;
+  margin: 0 auto;
+  line-height: 1.75;
+  animation: fade-in 0.8s ease-out 0.2s both;
 }
 
-.trust-grid {
+/* Cards Grid */
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-bottom: 24px;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.trust-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 32px 24px;
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .trust-title {
+    font-size: 3rem;
+  }
+}
+
+/* Brand Cards */
+.brand-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  min-height: 120px;
-}
-
-.trust-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.trust-logo-placeholder {
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-  font-weight: 500;
-}
-
-.trust-button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.trust-toggle-btn {
-  padding: 12px 32px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #1e5a8e;
-  background-color: transparent;
-  border: 2px solid #1e5a8e;
-  border-radius: 4px;
+  min-height: 180px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  animation: fade-in-up 0.6s ease-out both;
   cursor: pointer;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Purple Card (SBI) - Dark Red Theme */
+.brand-card.purple {
+  background: linear-gradient(135deg, #1a0a0a 0%, #3d1a1a 100%);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.brand-card.purple:hover {
+  box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.5);
+}
+
+.brand-card.purple .border-glow {
+  background: linear-gradient(45deg, transparent, rgba(239, 68, 68, 0.5), transparent);
+}
+
+.brand-card.purple .gradient-overlay {
+  background: linear-gradient(to bottom right, rgba(220, 38, 38, 0.2), transparent, rgba(220, 38, 38, 0.2));
+}
+
+.brand-card.purple .scan-line {
+  background: linear-gradient(180deg, transparent, rgba(239, 68, 68, 0.4), transparent);
+}
+
+.brand-card.purple .corner-top-left {
+  border-top: 2px solid rgba(252, 165, 165, 0.5);
+  border-left: 2px solid rgba(252, 165, 165, 0.5);
+}
+
+.brand-card.purple .corner-bottom-right {
+  border-bottom: 2px solid rgba(252, 165, 165, 0.5);
+  border-right: 2px solid rgba(252, 165, 165, 0.5);
+}
+
+.brand-card.purple .particle {
+  background-color: #f87171;
+}
+
+.brand-card.purple .brand-name {
+  color: #fecaca;
+}
+
+.brand-card.purple .glow-effect {
+  background: linear-gradient(to right, rgba(239, 68, 68, 0), rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0));
+}
+
+/* Brown Card (Piramal) - Dark Green Theme */
+.brand-card.brown {
+  background: linear-gradient(135deg, #0a2a1a 0%, #1a3a2a 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.brand-card.brown:hover {
+  box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.5);
+}
+
+.brand-card.brown .border-glow {
+  background: linear-gradient(45deg, transparent, rgba(74, 222, 128, 0.5), transparent);
+}
+
+.brand-card.brown .gradient-overlay {
+  background: linear-gradient(to bottom right, rgba(34, 197, 94, 0.2), transparent, rgba(34, 197, 94, 0.2));
+}
+
+.brand-card.brown .scan-line {
+  background: linear-gradient(180deg, transparent, rgba(74, 222, 128, 0.4), transparent);
+}
+
+.brand-card.brown .corner-top-left {
+  border-top: 2px solid rgba(134, 239, 172, 0.5);
+  border-left: 2px solid rgba(134, 239, 172, 0.5);
+}
+
+.brand-card.brown .corner-bottom-right {
+  border-bottom: 2px solid rgba(134, 239, 172, 0.5);
+  border-right: 2px solid rgba(134, 239, 172, 0.5);
+}
+
+.brand-card.brown .particle {
+  background-color: #4ade80;
+}
+
+.brand-card.brown .brand-name {
+  color: #bbf7d0;
+}
+
+.brand-card.brown .glow-effect {
+  background: linear-gradient(to right, rgba(74, 222, 128, 0), rgba(74, 222, 128, 0.1), rgba(74, 222, 128, 0));
+}
+
+/* Blue Card (BOB) - Dark Brown Theme */
+.brand-card.blue {
+  background: linear-gradient(135deg, #1a1a1a 0%, #332211 100%);
+  border: 1px solid rgba(180, 83, 9, 0.3);
+}
+
+.brand-card.blue:hover {
+  box-shadow: 0 25px 50px -12px rgba(180, 83, 9, 0.5);
+}
+
+.brand-card.blue .border-glow {
+  background: linear-gradient(45deg, transparent, rgba(217, 119, 6, 0.5), transparent);
+}
+
+.brand-card.blue .gradient-overlay {
+  background: linear-gradient(to bottom right, rgba(180, 83, 9, 0.2), transparent, rgba(180, 83, 9, 0.2));
+}
+
+.brand-card.blue .scan-line {
+  background: linear-gradient(180deg, transparent, rgba(217, 119, 6, 0.4), transparent);
+}
+
+.brand-card.blue .corner-top-left {
+  border-top: 2px solid rgba(251, 191, 36, 0.5);
+  border-left: 2px solid rgba(251, 191, 36, 0.5);
+}
+
+.brand-card.blue .corner-bottom-right {
+  border-bottom: 2px solid rgba(251, 191, 36, 0.5);
+  border-right: 2px solid rgba(251, 191, 36, 0.5);
+}
+
+.brand-card.blue .particle {
+  background-color: #fbbf24;
+}
+
+.brand-card.blue .brand-name {
+  color: #fef3c7;
+}
+
+.brand-card.blue .glow-effect {
+  background: linear-gradient(to right, rgba(217, 119, 6, 0), rgba(217, 119, 6, 0.1), rgba(217, 119, 6, 0));
+}
+
+/* Card Elements */
+.border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0.3;
+  background-size: 200% 200%;
+  animation: border-glow 3s ease infinite;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.brand-card:hover .gradient-overlay {
+  opacity: 1;
+}
+
+.scan-line {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  background-size: 100% 100px;
+  animation: scan-line 3s linear infinite;
+}
+
+.brand-card:hover .scan-line {
+  opacity: 0.3;
+}
+
+.corner-accent {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: corner-glow 2s ease-in-out infinite;
+}
+
+.brand-card:hover .corner-accent {
+  opacity: 1;
+}
+
+.corner-top-left {
+  top: 0;
+  left: 0;
+}
+
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.brand-card:hover .particle {
+  opacity: 1;
+}
+
+.particle-1 {
+  top: 16px;
+  right: 16px;
+  animation: float-particle-1 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  bottom: 16px;
+  left: 16px;
+  animation: float-particle-2 3s ease-in-out infinite 0.5s;
+}
+
+.brand-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: bold;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
 }
 
-.trust-toggle-btn:hover {
-  background-color: #1e5a8e;
+.brand-card:hover .brand-name {
   color: #ffffff;
+  transform: scale(1.05);
 }
 
-.trust-toggle-btn:active {
-  transform: scale(0.98);
+.glow-effect {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0;
+  filter: blur(24px);
+  transition: opacity 0.5s ease;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .trust-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+.brand-card:hover .glow-effect {
+  opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
-  .trust-section {
-    padding: 40px 16px;
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-
-  .trust-heading {
-    font-size: 28px;
-  }
-
-  .trust-subheading {
-    font-size: 14px;
-    margin-bottom: 32px;
-  }
-
-  .trust-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .trust-card {
-    padding: 24px 16px;
-    min-height: 100px;
-  }
-
-  .trust-logo-placeholder {
-    font-size: 12px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media screen and (max-width: 480px) {
-  .trust-heading {
-    font-size: 24px;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .trust-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+@keyframes slide-in {
+  from { width: 0; }
+  to { width: 96px; }
+}
+
+@keyframes border-glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes scan-line {
+  0% { background-position: 0 -100px; }
+  100% { background-position: 0 calc(100% + 100px); }
+}
+
+@keyframes corner-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float-particle-1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -10px); }
+}
+
+@keyframes float-particle-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, 10px); }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .trust-title {
+    font-size: 2rem;
+  }
+  
+  .trust-description {
+    font-size: 1rem;
+  }
+  
+  .brand-card {
+    padding: 36px;
   }
 }

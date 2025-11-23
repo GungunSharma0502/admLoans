@@ -5,17 +5,27 @@ import '../css/Navbar.css';
 const Navbar = () => {
   const location = useLocation();
   const [isExploreOpen, setIsExploreOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const exploreRef = useRef(null);
 
   const isActive = (path) => {
     return location.pathname === path;
   };
 
-  const toggleExplore = () => {
+  const toggleExplore = (e) => {
+    e.stopPropagation();
     setIsExploreOpen(!isExploreOpen);
   };
 
-  // Close dropdown when clicking outside
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  // Close dropdown when clicking outside (Desktop)
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (exploreRef.current && !exploreRef.current.contains(event.target)) {
@@ -29,111 +39,186 @@ const Navbar = () => {
     };
   }, []);
 
-  return (
-    <nav className="navbar">
-      <div className="nav-menu">
-        {/* Logo */}
-        <Link 
-          to="/" 
-          className={`nav-item nav-logo ${isActive('/') ? 'active' : ''}`}
-        >
-          ANDROMEDA
-        </Link>
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMobileMenuOpen]);
 
-        {/* Home Link */}
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar-menu">
+          {/* Logo */}
+          <Link 
+            to="/" 
+            className={`navbar-item navbar-logo ${isActive('/') ? 'active' : ''}`}
+            onClick={closeMobileMenu}
+          >
+            Green Bunch Loans
+          </Link>
+
+          {/* Desktop Menu Items */}
+          <Link 
+            to="/" 
+            className={`navbar-item ${isActive('/') ? 'active' : ''}`}
+          >
+            Home
+          </Link>
+
+          <Link 
+            to="/about" 
+            className={`navbar-item ${isActive('/about') ? 'active' : ''}`}
+          >
+            About Us
+          </Link>
+
+          <Link 
+            to="/contact" 
+            className={`navbar-item ${isActive('/contact') ? 'active' : ''}`}
+          >
+            Contact Us
+          </Link>
+
+          {/* Desktop Dropdown */}
+          <div className="navbar-explore-container" ref={exploreRef}>
+            <button 
+              className="navbar-explore-btn"
+              onClick={toggleExplore}
+              type="button"
+            >
+              Services
+              <span style={{ 
+                transform: isExploreOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
+                transition: 'transform 0.3s ease',
+                display: 'inline-block',
+                fontSize: '10px',
+                marginLeft: '3px'
+              }}>
+                ▼
+              </span>
+            </button>
+            
+            {isExploreOpen && (
+              <div className="navbar-explore-dropdown">
+                <Link 
+                  to="/BusinessLoan" 
+                  className="navbar-explore-item"
+                  onClick={() => setIsExploreOpen(false)}
+                >
+                  Business Loan
+                </Link>
+                <Link 
+                  to="/HomeLoan" 
+                  className="navbar-explore-item"
+                  onClick={() => setIsExploreOpen(false)}
+                >
+                  Home Loan
+                </Link>
+                <Link 
+                  to="/MachineLoan" 
+                  className="navbar-explore-item"
+                  onClick={() => setIsExploreOpen(false)}
+                >
+                  Machine Loan
+                </Link>
+                <Link 
+                  to="/LoanAgainstProperty" 
+                  className="navbar-explore-item"
+                  onClick={() => setIsExploreOpen(false)}
+                >
+                  Loan Against Property
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Hamburger Menu Button */}
+          <button 
+            className={`navbar-hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar */}
+      <div className={`navbar-sidebar ${isMobileMenuOpen ? 'active' : ''}`}>
         <Link 
           to="/" 
-          className={`nav-item ${isActive('/') ? 'active' : ''}`}
+          className={`navbar-sidebar-item ${isActive('/') ? 'active' : ''}`}
+          onClick={closeMobileMenu}
         >
           Home
         </Link>
 
-        {/* About Link */}
         <Link 
           to="/about" 
-          className={`nav-item ${isActive('/about') ? 'active' : ''}`}
+          className={`navbar-sidebar-item ${isActive('/about') ? 'active' : ''}`}
+          onClick={closeMobileMenu}
         >
           About Us
         </Link>
 
-        {/* Contact Link */}
         <Link 
           to="/contact" 
-          className={`nav-item ${isActive('/contact') ? 'active' : ''}`}
+          className={`navbar-sidebar-item ${isActive('/contact') ? 'active' : ''}`}
+          onClick={closeMobileMenu}
         >
           Contact Us
         </Link>
 
-        {/* Explore Dropdown */}
-        <div className="nav-explore-container" ref={exploreRef}>
-          <button 
-            className="nav-explore-btn"
-            onClick={toggleExplore}
-          >
-            Explore
-            <span style={{ 
-              transform: isExploreOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
-              transition: 'transform 0.3s ease',
-              display: 'inline-block',
-              fontSize: '10px',
-              marginLeft: '3px'
-            }}>
-              ▼
-            </span>
-          </button>
+        {/* Services in Sidebar */}
+        <div className="navbar-sidebar-services">
+          <div className="navbar-sidebar-services-title">Services</div>
           
-          {isExploreOpen && (
-            <div className="nav-explore-dropdown">
-              <Link 
-                to="/loans" 
-                className="nav-explore-item"
-                onClick={() => setIsExploreOpen(false)}
-              >
-                Loans
-              </Link>
-              <Link 
-                to="/services" 
-                className="nav-explore-item"
-                onClick={() => setIsExploreOpen(false)}
-              >
-                Services
-              </Link>
-              <Link 
-                to="/partners" 
-                className="nav-explore-item"
-                onClick={() => setIsExploreOpen(false)}
-              >
-                Partners
-              </Link>
-              <Link 
-                to="/calculator" 
-                className="nav-explore-item"
-                onClick={() => setIsExploreOpen(false)}
-              >
-                Calculator
-              </Link>
-            </div>
-          )}
-        </div>
+          <Link 
+            to="/BusinessLoan" 
+            className="navbar-sidebar-service-item"
+            onClick={closeMobileMenu}
+          >
+            Business Loan
+          </Link>
 
-        {/* Optional: Add username and logout if user is logged in */}
-        {/* Uncomment and modify based on your auth logic
-        {isLoggedIn && (
-          <>
-            <span className="nav-item nav-username">
-              {username}
-            </span>
-            <button 
-              className="nav-item nav-logout-btn"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </>
-        )}
-        */}
+          <Link 
+            to="/HomeLoan" 
+            className="navbar-sidebar-service-item"
+            onClick={closeMobileMenu}
+          >
+            Home Loan
+          </Link>
+
+          <Link 
+            to="/MachineLoan" 
+            className="navbar-sidebar-service-item"
+            onClick={closeMobileMenu}
+          >
+            Machine Loan
+          </Link>
+
+          <Link 
+            to="/LoanAgainstProperty" 
+            className="navbar-sidebar-service-item"
+            onClick={closeMobileMenu}
+          >
+            Loan Against Property
+          </Link>
+        </div>
       </div>
-    </nav>
+
+      {/* Overlay */}
+      <div 
+        className={`navbar-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={closeMobileMenu}
+      ></div>
+    </>
   );
 };
 

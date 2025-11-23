@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/HeroSlider.css';
+import { Link } from 'react-router-dom';
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,12 +8,12 @@ const HeroSlider = () => {
 
   const slides = [
     {
-      title: "We are Andromeda, India's Largest Loan Distributor",
-      description: "Join Andromeda as a Financial Advisor. Be a part of a large and growing family of 25,000+ partners.",
+      title: "Empowering Your Financial Journey With Smarter Loans",
+      description: "At Green Bunch Loans, we bring you simple, fast, and transparent loan solutions designed to support your personal and business goals. Get quick approvals, flexible repayment options, and trusted guidance every step of the way.",
     },
     {
-      title: "Partner with Andromeda for the best deals and offers",
-      description: "Partner with Andromeda and get closer to financial freedom",
+      title: "Your Trusted Partner for Secure & Hassle-Free Loans",
+      description: "Whether you need a personal loan, business funding, or home finance, Green Bunch Loans offers reliable services tailored to your needs. Experience a smooth, stress-free process with expert support and responsible lending.",
     }
   ];
 
@@ -71,28 +72,18 @@ const HeroSlider = () => {
             </div>
             
             <div className="button-group">
-              <button className="btn btn-primary">
-                <span className="btn-text">PARTNER NOW</span>
-                <div className="btn-overlay" />
-                <span className="btn-text-hover">PARTNER NOW</span>
-              </button>
-              
-              <button className="btn btn-secondary">
-                LEARN MORE
-              </button>
+              <Link to="/about">
+                <button className="btn btn-primary">
+                  LEARN MORE
+                </button>
+              </Link>
             </div>
           </div>
 
           <div className="decorative-background">
             <div className="decorative-container">
               
-              <div className="rotating-frame">
-                <div className="frame-corner frame-top-left" />
-                <div className="frame-corner frame-top-right" />
-                <div className="frame-corner frame-bottom-left" />
-                <div className="frame-corner frame-bottom-right" />
-              </div>
-
+              {/* Orbiting Dots Only - No Rotating Frame */}
               {[0, 1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
@@ -106,6 +97,7 @@ const HeroSlider = () => {
                 </div>
               ))}
 
+              {/* Circular Orbits */}
               <div className="accent-circle accent-circle-1" />
               <div className="accent-circle accent-circle-2" />
             </div>

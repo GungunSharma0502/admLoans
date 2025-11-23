@@ -13,7 +13,13 @@ import News from './components/News'
 import Footer from './components/Footer'
 import About from './components/About'
 import Contact from './components/Contact'
-
+import HomeLoan from './Pages/HomeLoan'
+import BusinessLoan from './Pages/BusinessLoan'
+import MachineLoan from './Pages/MachineLoan'
+import LoanAgainstProperty from './Pages/LoanAgainstProperty'
+import EMICalculator from './components/EMICalculator'
+import ScrollToTop from './components/ScrollToTop'
+import Careers from './Pages/Careers'
 
 function App() {
   return (
@@ -26,40 +32,25 @@ function App() {
           path="/"
           element={
             <>
-            
+           
               <HeroSlider />
-             <News />
-              <AndromedaEdge />
               <Standards />
-               <Story />
               <Trust />
-
-              <Award />
-              
+              <EMICalculator/>
               <Contact/>
             </>
           }
         />
        
         {/* Home route */}
-        <Route
-          path="/about"
-          element={
-            <>
-             <About />
-              
-              <Standards />
-              <Trust />
-              <Award />
-              <News />
-            </>
-          }
-        />
-        {/* About page */}
-        
-
-        {/* Add more pages if needed */}
+        <Route path="/about"element={<About />}/>
         <Route path="/contact" element={<Contact />} />
+        <Route path="/HomeLoan" element={<HomeLoan />} />
+        <Route path="/BusinessLoan" element={<BusinessLoan />} />
+        <Route path="/MachineLoan" element={<MachineLoan />} />
+        <Route path="/LoanAgainstProperty" element={<LoanAgainstProperty />} />
+        <Route path="/EMICalculator" element={<EMICalculator />} />
+        <Route path="/Careers" element={<Careers/>} />
       </Routes>
 
       <Footer />

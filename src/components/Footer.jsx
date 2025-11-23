@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Footer.css';
 
 const Footer = () => {
@@ -20,7 +21,7 @@ const Footer = () => {
                 <span>▲</span>
               </div>
               <div className="footer__logo-text">
-                <h2>ANDROMEDA</h2>
+                <h2>Green Bunch Loan</h2>
                 <p>INDIA'S LARGEST LOAN DISTRIBUTOR</p>
               </div>
             </div>
@@ -53,13 +54,11 @@ const Footer = () => {
           <div className="footer__section">
             <h3 className="footer__heading">Company</h3>
             <ul className="footer__links">
-              <li><a href="#careers">Careers</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-              <li><a href="#lending">Lending Partners</a></li>
-              <li><a href="#grievance">Grievance Redressal Process</a></li>
-              <li><a href="#bureau">Bureau Consent Revoke</a></li>
-              <li><a href="#rbi">RBI Sachet Portal</a></li>
+              <li><Link to="/Careers">Careers</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/grievance">Grievance Redressal Process</Link></li>
+              <li><a href="https://sachet.rbi.org.in/">RBI Sachet Portal</a></li>
             </ul>
           </div>
 
@@ -67,12 +66,10 @@ const Footer = () => {
           <div className="footer__section">
             <h3 className="footer__heading">Resources</h3>
             <ul className="footer__links">
-              <li><a href="#media">Media Coverage</a></li>
-              <li><a href="#credit">Free Credit Score</a></li>
-              <li><a href="#events">Events</a></li>
-              <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#annual">Annual Return</a></li>
-              <li><a href="#retail">Indian Retail Loans Overview</a></li>
+              <li><Link to="/credit">Free Credit Score</Link></li>
+              <li><Link to="/blogs">Blogs</Link></li>
+              <li><Link to="/annual">Annual Return</Link></li>
+              <li><Link to="/retail">Indian Retail Loans Overview</Link></li>
             </ul>
           </div>
 
@@ -80,9 +77,7 @@ const Footer = () => {
           <div className="footer__section">
             <h3 className="footer__heading">DSA</h3>
             <ul className="footer__links">
-              <li><a href="#partner">DSA Partner</a></li>
-              <li><a href="#agent">Loan Agent</a></li>
-              <li><a href="#emi">EMI Calculator</a></li>
+              <li><Link to="/EMICalculator">EMI Calculator</Link></li>
             </ul>
           </div>
         </div>
@@ -91,9 +86,9 @@ const Footer = () => {
         <div className="footer__bottom">
           <p className="footer__copyright">© ANDROMEDA SALES & DISTRIBUTION PRIVATE LIMITED</p>
           <div className="footer__legal">
-            <a href="#terms">TERMS OF USE</a>
+            <Link to="/terms">TERMS OF USE</Link>
             <span className="footer__divider">|</span>
-            <a href="#privacy">PRIVACY POLICY</a>
+            <Link to="/privacy">PRIVACY POLICY</Link>
           </div>
         </div>
 

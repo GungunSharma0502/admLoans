@@ -1,0 +1,586 @@
+
+.homeloan-page-container {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 80px; /* Added padding to push content below navbar */
+}
+
+.homeloan-page-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(29, 48, 47, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(29, 48, 47, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.homeloan-header-section {
+  position: relative;
+  height: 400px;
+  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.homeloan-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 48, 47, 0.85);
+  z-index: 1;
+}
+
+.homeloan-header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.homeloan-main-heading {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 8px;
+  margin-bottom: 1rem;
+}
+
+.homeloan-header-subtitle {
+  font-size: 1.5rem;
+  color: #36ffdb;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.homeloan-nav-bar {
+  position: sticky;
+  top: 80px; /* Positioned below the main navbar */
+  z-index: 999; /* Lower than main navbar (which is 1000) */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(29, 48, 47, 0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.homeloan-glass {
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(29, 48, 47, 0.1);
+}
+
+.homeloan-nav-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeloan-nav-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homeloan-nav-link {
+  background: transparent;
+  border: 1px solid rgba(29, 48, 47, 0.2);
+  color: #1d302f;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.homeloan-nav-link:hover {
+  background: linear-gradient(135deg, #1d302f, #2a4a48);
+  border-color: #1d302f;
+  color: #ffffff;
+}
+
+.homeloan-nav-link.homeloan-active {
+  background: #1d302f;
+  border-color: #1d302f;
+  color: #ffffff;
+}
+
+.homeloan-content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.homeloan-section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 180px; /* Increased to account for both navbars */
+}
+
+.homeloan-section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1d302f;
+  text-align: center;
+  font-weight: 600;
+}
+
+.homeloan-glass-card {
+  background: #1d302f;
+  border: 1px solid #1d302f;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.homeloan-glass-card:hover {
+  background: linear-gradient(135deg, #1d302f, #2a4a48);
+  border-color: #2a4a48;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.homeloan-hero-card {
+  margin-bottom: 2rem;
+}
+
+.homeloan-hero-content {
+  margin-top: 1.5rem;
+}
+
+.homeloan-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.homeloan-feature-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1d302f;
+  border-radius: 10px;
+  border: 1px solid #1d302f;
+  transition: all 0.3s ease;
+}
+
+.homeloan-feature-item:hover {
+  background: linear-gradient(135deg, #1d302f, #2a4a48);
+  border-color: #2a4a48;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homeloan-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.homeloan-feature-item h3 {
+  color: #36ffdb;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.homeloan-feature-item p {
+  color: #cdcdcd;
+  line-height: 1.6;
+}
+
+.homeloan-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.homeloan-feature-card h3 {
+  color: #ff8c00;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.homeloan-feature-card p {
+  color: #cdcdcd;
+  line-height: 1.6;
+}
+
+.homeloan-eligibility-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.homeloan-eligibility-container .homeloan-glass-card h3 {
+  color: #36ffdb;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.homeloan-eligibility-container .homeloan-glass-card p {
+  color: #cdcdcd;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.homeloan-eligibility-container .homeloan-glass-card strong {
+  color: #ffffff;
+}
+
+.homeloan-documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.homeloan-document-card h3 {
+  color: #ff8c00;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.homeloan-document-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.homeloan-document-card li {
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  background: rgba(54, 255, 219, 0.1);
+  border-left: 3px solid #36ffdb;
+  border-radius: 4px;
+  color: #cdcdcd;
+  transition: all 0.3s ease;
+}
+
+.homeloan-document-card li:hover {
+  background: rgba(54, 255, 219, 0.2);
+  border-left-color: #ff8c00;
+  transform: translateX(5px);
+}
+
+.homeloan-calculator-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homeloan-calculator-inputs {
+  margin-bottom: 2rem;
+}
+
+.homeloan-input-group {
+  margin-bottom: 2rem;
+}
+
+.homeloan-input-group label {
+  display: block;
+  color: #36ffdb;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.homeloan-input-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  background: rgba(54, 255, 219, 0.2);
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.homeloan-input-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #36ffdb;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.homeloan-input-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #36ffdb;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+.homeloan-input-value {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.homeloan-emi-result {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(54, 255, 219, 0.1);
+  border-radius: 10px;
+  border: 2px solid rgba(54, 255, 219, 0.3);
+}
+
+.homeloan-emi-result h3 {
+  color: #36ffdb;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.homeloan-emi-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.homeloan-emi-note {
+  color: #cdcdcd;
+  font-size: 1.1rem;
+}
+
+.homeloan-table-card {
+  overflow-x: auto;
+}
+
+.homeloan-fees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.homeloan-fees-table thead {
+  background: rgba(54, 255, 219, 0.1);
+}
+
+.homeloan-fees-table th,
+.homeloan-fees-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(54, 255, 219, 0.15);
+}
+
+.homeloan-fees-table th {
+  color: #36ffdb;
+  font-weight: 600;
+}
+
+.homeloan-fees-table td {
+  color: #cdcdcd;
+}
+
+.homeloan-fees-table tr:hover {
+  background: rgba(54, 255, 219, 0.05);
+}
+
+.homeloan-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.homeloan-review-card {
+  height: 100%;
+}
+
+.homeloan-review-header {
+  margin-bottom: 1rem;
+}
+
+.homeloan-review-rating {
+  margin-bottom: 0.5rem;
+}
+
+.homeloan-star {
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.homeloan-star.homeloan-filled {
+  color: #ff8c00;
+}
+
+.homeloan-review-card h4 {
+  color: #36ffdb;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.homeloan-review-text {
+  color: #cdcdcd;
+  line-height: 1.6;
+}
+
+.homeloan-faqs-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.homeloan-faq-card {
+  cursor: pointer;
+}
+
+.homeloan-faq-question {
+  color: #ff8c00;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.homeloan-faq-answer {
+  color: #cdcdcd;
+  line-height: 1.6;
+}
+
+.homeloan-cta-section {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 4rem;
+  background: #1d302f;
+  border: 1px solid #1d302f;
+  transition: all 0.3s ease;
+}
+
+.homeloan-cta-section:hover {
+  background: linear-gradient(135deg, #1d302f, #2a4a48);
+}
+
+.homeloan-cta-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.homeloan-cta-section p {
+  color: #cdcdcd;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.homeloan-cta-button {
+  background: #36ffdb;
+  color: #1d302f;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.homeloan-cta-button:hover {
+  background: #ff8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .homeloan-page-container {
+    padding-top: 60px; /* Reduced padding for mobile */
+  }
+
+  .homeloan-main-heading {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  .homeloan-header-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .homeloan-header-section {
+    height: 300px;
+  }
+
+  .homeloan-nav-bar {
+    top: 60px; /* Adjusted for mobile navbar */
+  }
+
+  .homeloan-nav-content {
+    flex-direction: column;
+  }
+
+  .homeloan-nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .homeloan-nav-link {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .homeloan-section {
+    scroll-margin-top: 140px; /* Adjusted for mobile */
+  }
+
+  .homeloan-section-title {
+    font-size: 2rem;
+  }
+
+  .homeloan-content-wrapper {
+    padding: 1rem;
+  }
+
+  .homeloan-glass-card {
+    padding: 1.5rem;
+  }
+
+  .homeloan-feature-grid,
+  .homeloan-features-grid,
+  .homeloan-documents-grid,
+  .homeloan-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homeloan-emi-amount {
+    font-size: 2rem;
+  }
+
+  .homeloan-cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeloan-page-container {
+    padding-top: 50px;
+  }
+
+  .homeloan-nav-bar {
+    top: 50px;
+  }
+
+  .homeloan-section {
+    scroll-margin-top: 120px;
+  }
+}
