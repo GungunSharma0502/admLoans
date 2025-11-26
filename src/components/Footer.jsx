@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="footer__contact">
               <p>158, Dani Corporate Park, C.S.T Road Kalina, Santacruz (E),</p>
               <p>Mumbai - 400098</p>
-              <p>Mail Us: <a href="mailto:contact@andromeda.in">contact@andromeda.in</a></p>
+              <p>Mail Us: <a href="mailto:contact@andromeda.in">contact@greenbunch.in</a></p>
               <p>Call Us: <a href="tel:+919152556556">+91-9152556556</a></p>
             </div>
             <div className="footer__social">
@@ -68,8 +68,7 @@ const Footer = () => {
             <ul className="footer__links">
               <li><Link to="/credit">Free Credit Score</Link></li>
               <li><Link to="/blogs">Blogs</Link></li>
-              <li><Link to="/annual">Annual Return</Link></li>
-              <li><Link to="/retail">Indian Retail Loans Overview</Link></li>
+           
             </ul>
           </div>
 
@@ -84,7 +83,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="footer__bottom">
-          <p className="footer__copyright">© ANDROMEDA SALES & DISTRIBUTION PRIVATE LIMITED</p>
+          <p className="footer__copyright">© Green Bunch Loans SALES & DISTRIBUTION PRIVATE LIMITED</p>
           <div className="footer__legal">
             <Link to="/terms">TERMS OF USE</Link>
             <span className="footer__divider">|</span>

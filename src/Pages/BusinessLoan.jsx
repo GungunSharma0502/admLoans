@@ -60,22 +60,22 @@ const BusinessLoan = () => {
     {
       name: "PRANALI FATAK",
       rating: 4,
-      text: "All employees and staffs in RULOANS are helpful. They are very co-operative and try to clearly understand customer's needs. I felt very comfortable dealing with them through for my business loan from ICICI bank"
+      text: "All employees and staffs in GreenBunch are helpful. They are very co-operative and try to clearly understand customer's needs. I felt very comfortable dealing with them through for my business loan from ICICI bank"
     },
     {
       name: "DHARA GORI",
       rating: 4,
-      text: "I was a housewife and wanted to start my own kitchen for food delivery. RULOANS helped me to get a business loan from my preferred bank. The rate of interest is very much affordable and now I have started my kitchen, which is running very smoothly and is profitable."
+      text: "I was a housewife and wanted to start my own kitchen for food delivery. GreenBunch helped me to get a business loan from my preferred bank. The rate of interest is very much affordable and now I have started my kitchen, which is running very smoothly and is profitable."
     },
     {
       name: "SATISH UPARE",
       rating: 4,
-      text: "I never thought getting a business loan will be this easy. Great thanks to RULOANS for offering such good platform for all loan requirements. I got business loans at 16% ROI and money was disbursed within 8 days of applying for loan"
+      text: "I never thought getting a business loan will be this easy. Great thanks to GreenBunch for offering such good platform for all loan requirements. I got business loans at 16% ROI and money was disbursed within 8 days of applying for loan"
     },
     {
       name: "SANJAY GANDHI",
       rating: 4,
-      text: "I have figured applying for business startup loans through RULOANS is one of the smartest ways. If you are interested to save your time, efforts and money then you must try taking loan through RULOANS. Once you experience how good this platform will work for you, you will never think of other alternatives."
+      text: "I have figured applying for business startup loans through GreenBunch is one of the smartest ways. If you are interested to save your time, efforts and money then you must try taking loan through GreenBunch. Once you experience how good this platform will work for you, you will never think of other alternatives."
     }
   ];
 

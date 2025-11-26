@@ -55,22 +55,22 @@ const LoanAgainstProperty = () => {
     {
       name: "DHWANI DAVE",
       rating: 4,
-      text: "RULOANS helped me find the appropriate lender offering me the best interest rates and terms & conditions for purchasing a warehouse to setup my manufacturing unit. Within a span of 20 days my loan against property got approved and disbursed."
+      text: "GreenBunch helped me find the appropriate lender offering me the best interest rates and terms & conditions for purchasing a warehouse to setup my manufacturing unit. Within a span of 20 days my loan against property got approved and disbursed."
     },
     {
       name: "MANN DESAI",
       rating: 4,
-      text: "Not having the proper knowledge of how to use and repay the loans I got under a debt of 37 lacs from 4 various banks and the rate of interest of all the loans being high it was getting very difficult for me to repay all the loans together and keeping a track of all the EMI's. I then read a blog of debt consolidation posted by RULOANS in which I got knowledge about it."
+      text: "Not having the proper knowledge of how to use and repay the loans I got under a debt of 37 lacs from 4 various banks and the rate of interest of all the loans being high it was getting very difficult for me to repay all the loans together and keeping a track of all the EMI's. I then read a blog of debt consolidation posted by GreenBunch in which I got knowledge about it."
     },
     {
       name: "PRERANA SONI",
       rating: 4,
-      text: "I really liked the loan against property by Ruloans. The moment I applied for it I got a call from their representative for further process. My documents were collected from home and the process was completed on time. A big thanks to Ruloans."
+      text: "I really liked the loan against property by GreenBunch. The moment I applied for it I got a call from their representative for further process. My documents were collected from home and the process was completed on time. A big thanks to GreenBunch."
     },
     {
       name: "ADITI GANGWAL",
       rating: 4,
-      text: "My loan against property was taken through Ruloans. It was a smooth process and they regularly updated me with the developments. Even they sanctioned my loan in a proper time frame. Surely recommended."
+      text: "My loan against property was taken through GreenBunch. It was a smooth process and they regularly updated me with the developments. Even they sanctioned my loan in a proper time frame. Surely recommended."
     }
   ];
 

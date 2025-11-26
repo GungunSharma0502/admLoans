@@ -115,7 +115,7 @@ const MachineLoan = () => {
     },
     {
       question: "Who are the lenders offering machinery loans?",
-      answer: "Ruloans partners with India's top-tier banks, NBFCs, and financial institutions including both public and private sector banks to offer competitive machinery loan options."
+      answer: "GreenBunch partners with India's top-tier banks, NBFCs, and financial institutions including both public and private sector banks to offer competitive machinery loan options."
     },
     {
       question: "Eligibility criteria for machinery loans?",
@@ -163,7 +163,7 @@ const MachineLoan = () => {
                 A machinery loan is a financial solution designed to empower businesses to acquire or upgrade essential equipment without straining their working capital. Machinery loans for MSMEs, startups, SMEs, larger businesses, and enterprises. Machinery financing ensures businesses can enhance operational efficiency, integrate advanced technology, and stay competitive in the market.
               </p>
               <p className="machine-desc-text">
-                Machinery loans are a type of business loan that can be used to buy new machines or upgrade existing equipment. Machinery loans help businesses overcome financial barriers, enabling them to scale operations without interruptions. With Ruloans, you can access machinery lending options from India's top-tier banks, NBFCs, and financial institutions. Whether you need a loan for machinery purchase or machinery finance for upgrades, we ensure your business gets the best deal with higher loan amounts, attractive interest rates, and flexible loan tenures.
+                Machinery loans are a type of business loan that can be used to buy new machines or upgrade existing equipment. Machinery loans help businesses overcome financial barriers, enabling them to scale operations without interruptions. With GreenBunch, you can access machinery lending options from India's top-tier banks, NBFCs, and financial institutions. Whether you need a loan for machinery purchase or machinery finance for upgrades, we ensure your business gets the best deal with higher loan amounts, attractive interest rates, and flexible loan tenures.
               </p>
             </div>
           </div>
@@ -335,13 +335,13 @@ const MachineLoan = () => {
         <section id="how-to-apply" className="machine-section">
           <h2 className="machine-section-title">How to Apply Online</h2>
           <div className="machine-glass-card machine-apply-card">
-            <p className="machine-apply-intro">Follow these simple steps to apply for a machinery and equipment loan online through Ruloans:</p>
+            <p className="machine-apply-intro">Follow these simple steps to apply for a machinery and equipment loan online through GreenBunch:</p>
             <div className="machine-steps-container">
               <div className="machine-step">
                 <div className="machine-step-number">1</div>
                 <div className="machine-step-content">
                   <h3>Visit the website and navigate to the Machinery Loan section</h3>
-                  <p>Go to ruloans.com, Click on Loans and select Machinery Loan</p>
+                  <p>Go to GreenBunch.com, Click on Loans and select Machinery Loan</p>
                 </div>
               </div>
               <div className="machine-step">
@@ -362,19 +362,19 @@ const MachineLoan = () => {
                 <div className="machine-step-number">4</div>
                 <div className="machine-step-content">
                   <h3>Enter Details & Submit Application</h3>
-                  <p>Enter address & income details along with loan details, Select Ruloans Experts, and submit your application</p>
+                  <p>Enter address & income details along with loan details, Select GreenBunch Experts, and submit your application</p>
                 </div>
               </div>
               <div className="machine-step">
                 <div className="machine-step-number">5</div>
                 <div className="machine-step-content">
                   <h3>Wait for Approval</h3>
-                  <p>Ruloans gets you the best deal that suits your business needs</p>
+                  <p>GreenBunch gets you the best deal that suits your business needs</p>
                 </div>
               </div>
             </div>
             <p className="machine-additional-info">
-              With Ruloans, you can also explore options for loan against machinery to unlock the value of your existing assets and ensure uninterrupted cash flow for your business. As India's leading loan distribution company, we offer a wide range of MSME loans for machinery needs, providing a seamless process to secure financing for your equipment.
+              With GreenBunch, you can also explore options for loan against machinery to unlock the value of your existing assets and ensure uninterrupted cash flow for your business. As India's leading loan distribution company, we offer a wide range of MSME loans for machinery needs, providing a seamless process to secure financing for your equipment.
             </p>
           </div>
         </section>

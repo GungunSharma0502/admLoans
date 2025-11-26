@@ -27,22 +27,22 @@ const HomeLoan = () => {
     {
       name: "SAMYAK SANCHETI",
       rating: 4,
-      text: "I was going through a low in my business and was unable to get financial support from lenders. Under these circumstances, Sahil from RULOANS suggested me to apply for a top-up home loan and use that money to fund my business. Thanks to the top-up home loan facility that helped my business to survive even in the odds."
+      text: "I was going through a low in my business and was unable to get financial support from lenders. Under these circumstances, Sahil from GreenBunch suggested me to apply for a top-up home loan and use that money to fund my business. Thanks to the top-up home loan facility that helped my business to survive even in the odds."
     },
     {
       name: "ROHAN GAIKWAD",
       rating: 4,
-      text: "I took a Home Loan for 20,00,000 from SBI via Ruloans. I received a Home loan at a sparkling rate of 6.90%. Being a government employee I was offered low processing fees and other charges were minimal. I am very happy and suggest you check Ruloans for the best home loan options"
+      text: "I took a Home Loan for 20,00,000 from SBI via GreenBunch. I received a Home loan at a sparkling rate of 6.90%. Being a government employee I was offered low processing fees and other charges were minimal. I am very happy and suggest you check GreenBunch for the best home loan options"
     },
     {
       name: "JITENDRA SINGH",
       rating: 4,
-      text: "I got home loan offer from HDFC Limited through Ruloans. Earlier I was choosing some other bank but Ruloans facility of comparison helped me with a better choice.The amount was sufficient with tenure period of 15 years. The rate of interest is moderate."
+      text: "I got home loan offer from HDFC Limited through GreenBunch. Earlier I was choosing some other bank but GreenBunch facility of comparison helped me with a better choice.The amount was sufficient with tenure period of 15 years. The rate of interest is moderate."
     },
     {
       name: "MANOJ JADHAV",
       rating: 4,
-      text: "First, I used RULOANS emi calculator to check the approximate EMI for a home loan. I found the website very good and then I applied for a home loan with KOTAK bank from here. My loan got approved in 10 days only."
+      text: "First, I used GreenBunch emi calculator to check the approximate EMI for a home loan. I found the website very good and then I applied for a home loan with KOTAK bank from here. My loan got approved in 10 days only."
     }
   ];
 
