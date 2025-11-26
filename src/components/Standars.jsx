@@ -11,30 +11,24 @@ const Standards = () => {
       id: 1,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop',
       quote: "Green Bunch Loans has completely transformed how I manage my investments. The platform is incredibly user-friendly, and their customer support team is always ready to help. I've seen consistent returns and feel confident about my financial future.",
-      name: 'Mr. Arjun Patel',
-      designation: 'Business Owner'
+      name: 'Rahul Kumar',
+      
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop',
+      image: 'https://media.istockphoto.com/id/1216426542/photo/portrait-of-happy-man-at-white-background-stock-photo.webp?a=1&b=1&s=612x612&w=0&k=20&c=EgxUJNnRMUmyCuVLrnMWcQMPq9EGqdjHNZEBGgAa3hg=',
       quote: "I was hesitant about investing online, but Green Bunch Loans made the entire process seamless and transparent. Their expert guidance helped me make informed decisions, and I'm thrilled with the growth of my portfolio over the past year.",
-      name: 'Ms. Neha Verma',
-      designation: 'Software Engineer'
+      name: 'Prashant Mehta',
+      
     },
     {
       id: 3,
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop',
       quote: "The best investment decision I made was choosing Green Bunch Loans. Their platform offers excellent investment options with complete transparency. The regular updates and detailed reports keep me informed every step of the way.",
-      name: 'Mr. Vikram Singh',
-      designation: 'Marketing Professional'
+      name: 'Gajendra Varma',
+
     },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=500&fit=crop',
-      quote: "Green Bunch Loans's personalized approach to wealth management is outstanding. They took time to understand my financial goals and created a perfect investment strategy for me. Highly recommend their services to anyone looking to grow their wealth.",
-      name: 'Ms. Riya Kapoor',
-      designation: 'Doctor'
-    }
+    
   ];
 
   const handleSlideChange = (newIndex, dir) => {
