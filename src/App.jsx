@@ -4,12 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import './App.css'
 import HeroSlider from './components/HeroSlider'
-import Story from './components/Story'
-import AndromedaEdge from './components/AdEdge'
+
 import Standards from './components/Standars'
 import Trust from './components/Trust'
-import Award from './components/Award'
-import News from './components/News'
+
 import Footer from './components/Footer'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -20,10 +18,13 @@ import LoanAgainstProperty from './Pages/LoanAgainstProperty'
 import EMICalculator from './components/EMICalculator'
 import ScrollToTop from './components/ScrollToTop'
 import Careers from './Pages/Careers'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
+import TermsAndConditions from './Pages/TermsAndConditions'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
@@ -32,7 +33,6 @@ function App() {
           path="/"
           element={
             <>
-           
               <HeroSlider />
               <Standards />
               <Trust />
@@ -42,8 +42,8 @@ function App() {
           }
         />
        
-        {/* Home route */}
-        <Route path="/about"element={<About />}/>
+        {/* Other routes */}
+        <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/HomeLoan" element={<HomeLoan />} />
         <Route path="/BusinessLoan" element={<BusinessLoan />} />
@@ -51,6 +51,9 @@ function App() {
         <Route path="/LoanAgainstProperty" element={<LoanAgainstProperty />} />
         <Route path="/EMICalculator" element={<EMICalculator />} />
         <Route path="/Careers" element={<Careers/>} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
+        <Route path="/TermsAndConditions" element={<TermsAndConditions/>}/>
+
       </Routes>
 
       <Footer />
@@ -58,4 +61,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

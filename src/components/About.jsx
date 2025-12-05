@@ -26,7 +26,7 @@ export default function About() {
       <div className="main-content">
         {/* Introduction */}
         <div className="intro-section">
-          <div className="section-header">
+          <div className="section-header">``
             <div className="icon-wrapper icon-emerald">
               <Users className="icon" />
             </div>

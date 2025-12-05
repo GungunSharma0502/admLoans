@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import '../css/Navbar.css';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -52,13 +53,14 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="navbar-menu">
-          {/* Logo */}
+          {/* Logo with Image */}
           <Link 
             to="/" 
             className={`navbar-item navbar-logo ${isActive('/') ? 'active' : ''}`}
             onClick={closeMobileMenu}
           >
-            Green Bunch Loans
+            <img src={logo} alt="Green Bunch Loans" className="navbar-logo-image" />
+            <span className="navbar-logo-text">Green Bunch Loans</span>
           </Link>
 
           {/* Desktop Menu Items */}

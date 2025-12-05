@@ -26,28 +26,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer__contact">
-              <p>158, Dani Corporate Park, C.S.T Road Kalina, Santacruz (E),</p>
-              <p>Mumbai - 400098</p>
-              <p>Mail Us: <a href="mailto:contact@andromeda.in">contact@greenbunch.in</a></p>
-              <p>Call Us: <a href="tel:+919152556556">+91-9152556556</a></p>
+              <p>Plot no. 48, Propex City Phase- 1, Sector 8,</p>
+              <p>Sohna Road Palwal -121102
+</p>
+              <p>Mail Us: <a href="mailto:Greenbunchadvisor@gmail.com">Greenbunchadvisor@gmail.com </a></p>
+              <p>Call Us: <a href="tel:+918814007414">+918814007414</a></p>
             </div>
-            <div className="footer__social">
-              <a href="#" className="footer__social-link" aria-label="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="footer__social-link" aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" className="footer__social-link" aria-label="YouTube">
-                <i className="fab fa-youtube"></i>
-              </a>
-              <a href="#" className="footer__social-link" aria-label="Instagram">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="footer__social-link" aria-label="WhatsApp">
-                <i className="fab fa-whatsapp"></i>
-              </a>
-            </div>
+           
           </div>
 
           {/* Company Links */}
@@ -85,9 +70,9 @@ const Footer = () => {
         <div className="footer__bottom">
           <p className="footer__copyright">© Green Bunch Loans SALES & DISTRIBUTION PRIVATE LIMITED</p>
           <div className="footer__legal">
-            <Link to="/terms">TERMS OF USE</Link>
+            <Link to="/TermsAndConditions">TERMS OF USE</Link>
             <span className="footer__divider">|</span>
-            <Link to="/privacy">PRIVACY POLICY</Link>
+            <Link to="/PrivacyPolicy">PRIVACY POLICY</Link>
           </div>
         </div>
 
